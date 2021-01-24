@@ -27,7 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{33CD4FEB-2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sql", "Sql", "{7DF43EEE-AF1A-4435-AE73-1959D376FA5B}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\OneDrive\Masaüstü\CreateLogTable.sql = ..\..\..\OneDrive\Masaüstü\CreateLogTable.sql
+		Docs\Sql\CreateLogTable.sql = Docs\Sql\CreateLogTable.sql
 	EndProjectSection
 EndProject
 Global
