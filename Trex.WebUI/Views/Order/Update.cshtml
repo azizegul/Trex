@@ -1,0 +1,84 @@
+﻿@model Trex.Entity.Models.Order
+@{
+    ViewData["Title"] = "Update";
+}
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-8">
+                <!-- general form elements -->
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Employee Create</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form method="post">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>CustomerId</label>
+                                <input asp-for="CustomerId" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>EmployeeId</label>
+                                <input asp-for="EmployeeId" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>OrderDate</label>
+                                <input asp-for="OrderDate" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>RequiredDate</label>
+                                <input asp-for="RequiredDate" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>ShippedDate</label>
+                                <input asp-for="ShippedDate" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>ShipVia</label>
+                                <input asp-for="ShipVia" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Freight</label>
+                                <input asp-for="Freight" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>ShipName</label>
+                                <input asp-for="ShipName" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Street</label>
+                                <input asp-for="ShipAddress.Street" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>City</label>
+                                <input asp-for="ShipAddress.City" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Region</label>
+                                <input asp-for="ShipAddress.Region" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>PostalCode</label>
+                                <input asp-for="ShipAddress.PostalCode" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Country</label>
+                                <input asp-for="ShipAddress.Country" class="form-control" />
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-info">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

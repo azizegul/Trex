@@ -1,0 +1,87 @@
+﻿@model Trex.Entity.Models.Employee
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-8">
+                <!-- general form elements -->
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Employee Create</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form method="post">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input asp-for="FirstName" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input asp-for="LastName" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Title</label>
+                                <input asp-for="Title" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Title ofCourtesty</label>
+                                <input asp-for="TitleOfCourtesy" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Birth Date</label>
+                                <input asp-for="BirthDate" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Hire Date</label>
+                                <input asp-for="HireDate" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Street</label>
+                                <input asp-for="Address.Street" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>City</label>
+                                <input asp-for="Address.City" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Region</label>
+                                <input asp-for="Address.Region" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Postal Code</label>
+                                <input asp-for="Address.PostalCode" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Country</label>
+                                <input asp-for="Address.Country" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input asp-for="Address.Phone" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>TerritoryIds</label>
+                                <input name="territoryIdList" value="" class="form-control" />
+                            </div>
+
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-info">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

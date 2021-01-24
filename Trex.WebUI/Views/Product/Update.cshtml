@@ -1,0 +1,110 @@
+﻿@model Trex.Entity.Models.Product
+@{
+    ViewData["Title"] = "Update";
+}
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-8">
+                <!-- general form elements -->
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Product Update</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form method="post">
+                        <div class="card-body">
+                            <input asp-for="Id" type="hidden" />
+                            <div class="form-group">
+                                <label>SupplierId</label>
+                                <input asp-for="SupplierId" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>CategoryId</label>
+                                <input asp-for="CategoryId" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>QuantityPerUnit</label>
+                                <input asp-for="QuantityPerUnit" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>UnitPrice</label>
+                                <input asp-for="UnitPrice" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>UnitsInStock</label>
+                                <input asp-for="UnitsInStock" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>UnitsOnOrder</label>
+                                <input asp-for="UnitsOnOrder" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>ReorderLevel</label>
+                                <input asp-for="ReorderLevel" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Discontinued</label>
+                                <input asp-for="Discontinued" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input asp-for="Name" class="form-control" />
+                            </div>
+                            <!--<div class="form-group">
+                                    <label>SupplierId</label>
+                                    <input asp-for="Supplier.Id" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Company Name</label>
+                                    <input asp-for="Supplier.CompanyName" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Contact Name</label>
+                                    <input asp-for="Supplier.ContactName" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Contact Title</label>
+                                    <input asp-for="Supplier.ContactTitle" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Street</label>
+                                    <input asp-for="Address.Street" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>City</label>
+                                    <input asp-for="Address.City" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Region</label>
+                                    <input asp-for="Address.Region" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Postal Code</label>
+                                    <input asp-for="Address.PostalCode" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Country</label>
+                                    <input asp-for="Address.Country" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <input asp-for="Address.Phone" class="form-control" />
+                                </div>
+                            </div>-->
+                            <!-- /.card-body -->
+                            <!--<div class="card-footer">
+                                <button type="submit" class="btn btn-info">Submit</button>
+                            </div>-->
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-info">Submit</button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

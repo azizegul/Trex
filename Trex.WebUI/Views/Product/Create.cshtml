@@ -1,0 +1,116 @@
+﻿@model Trex.ViewModel.ProductCreateViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-8">
+                <!-- general form elements -->
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Product Create</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form method="post">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Supplier</label>
+                                <select asp-for="Product.SupplierId"
+                                        asp-items="@(new SelectList(Model.Suppliers,"Id","CompanyName"))">
+                                    <option>Please select supplier one</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Category</label>
+                                <select asp-for="Product.CategoryId"
+                                        asp-items="@(new SelectList(Model.Categories,"Id","Name"))">
+                                    <option>Please select category one</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>QuantityPerUnit</label>
+                                <input asp-for="Product.QuantityPerUnit" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>UnitPrice</label>
+                                <input asp-for="Product.UnitPrice" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>UnitsInStock</label>
+                                <input asp-for="Product.UnitsInStock" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>UnitsOnOrder</label>
+                                <input asp-for="Product.UnitsOnOrder" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>ReorderLevel</label>
+                                <input asp-for="Product.ReorderLevel" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Discontinued</label>
+                                <input asp-for="Product.Discontinued" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input asp-for="Product.Name" class="form-control" />
+                            </div>
+                            @*<div class="form-group">
+            <label>SupplierId</label>
+            <input asp-for="Product.Supplier.Id" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Company Name</label>
+            <input asp-for="Product.Supplier.CompanyName" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Contact Name</label>
+            <input asp-for="Product.Supplier.ContactName" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Contact Title</label>
+            <input asp-for="Product.Supplier.ContactTitle" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Street</label>
+            <input asp-for="Product.Supplier.Address.Street" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>City</label>
+            <input asp-for="Product.Supplier.Address.City" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Region</label>
+            <input asp-for="Product.Supplier.Address.Region" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Postal Code</label>
+            <input asp-for="Product.Supplier.Address.PostalCode" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Country</label>
+            <input asp-for="Product.Supplier.Address.Country" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Phone</label>
+            <input asp-for="Product.Supplier.Address.Phone" class="form-control" />
+        </div>*@
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-info">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

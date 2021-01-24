@@ -1,0 +1,92 @@
+﻿@model IEnumerable<Trex.Entity.Models.Product>
+
+@{
+    ViewData["Title"] = "GetAll";
+}
+@if (Model.Count() > 0)
+{
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card card-info">
+                        <div class="card-header">
+                            <h3 class="card-title">Product List</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body table-responsive p-0">
+                            <table class="table table-hover text-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Supplier</th>
+                                        <th>Category</th>
+                                        @*<th>QuantityPerUnit</th>*@
+                                        @*<th>UnitPrice</th>*@
+                                        @*<th>UnitsInStock</th>*@
+                                        @*<th>UnitOnOrder</th>*@
+                                        @*<td>RecorderLevel</td>*@
+                                        <th>Discontinued</th>
+                                        <th>Name</th>
+                                        @*<th>Id</th>
+                                        <th>Company Name</th>
+                                        <th>Contact Name</th>
+                                        <th>Contact Title</th>
+                                        <th>Street</th>
+                                        <th>City</th>
+                                        <th>Region</th>
+                                        <th>Postal Code</th>
+                                        <th>Country</th>
+                                        <th>Phone</th>
+                                        <th>Id</th>
+                                        <th>Name</th>
+                                        <th>Description</th>*@
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var product in Model.ToList())
+                                    {
+                                    <tr>
+                                        <td>@product.Id</td>
+                                        <td>@product.Supplier?.CompanyName</td>
+                                        <td>@product.Category?.Name</td>
+                                        @*<td>@product.QuantityPerUnit</td>*@
+                                        @*<td>@product.UnitPrice</td>*@
+                                        @*<td>@product.UnitsInStock</td>*@
+                                        @*<td>@product.UnitsOnOrder</td>*@
+                                        @*<td>@product.ReorderLevel</td>*@
+                                        <td>@product.Discontinued</td>
+                                        <td>@product.Name</td>
+                                        @*<td>@product.SupplierId</td>*@
+                                        @*<td>@product.Supplier.CompanyName</td>*@
+                                        @*<td>@product.Supplier.ContactName</td>
+                                        <td>@product.Supplier.ContactTitle</td>
+                                        <td>@product.Supplier.Address.Street</td>
+                                        <td>@product.Supplier.Address.City</td>
+                                        <td>@product.Supplier.Address.Region</td>
+                                        <td>@product.Supplier.Address.PostalCode</td>
+                                        <td>@product.Supplier.Address.Country</td>
+                                        <td>@product.Supplier.Address.Phone</td>*@
+                                        @*<td>@product.Category.Id</td>
+                                        <td>@product.Category.Name</td>
+                                        <td>@product.Category.Description</td>*@
+
+                                        <td><a href="/product/update/@product.Id" class="btn btn-info btn-xs"><i class="fas fa-edit"></i></a></td>
+                                        <td> <a href="/product/delete/@product.Id" class="btn btn-danger btn-xs"><i class="fas fa-trash"></i></a></td>
+                                    </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div><!-- /.container-fluid -->
+        </div>
+    </section>
+}
+
+

@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Trex.Entity.Models.Order>
+
+@{
+    ViewData["Title"] = "GetAll";
+}
+@if (Model.Count() > 0)
+{
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card card-info">
+                        <div class="card-header">
+                            <h3 class="card-title">Order List</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body table-responsive p-0">
+                            <table class="table table-hover text-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>CustomerId</th>
+                                        @*<th>EmployeeId</th>*@
+                                        <th>OrderDate</th>
+                                        @*<th>RequiredDate</th>*@
+                                        @*<th>ShippedDate</th>*@
+                                        @*<th>ShipVia</th>*@
+                                        @*<td>Freight</td>*@
+                                        <th>ShipName</th>
+                                        @*<th>Street</th>*@
+                                        @*<th>City</th>*@
+                                        @*<th>Region</th>*@
+                                        @*<th>PostalCode</th>*@
+                                        <th>Country</th>
+                                        <th>Product Count</th>
+                                        @*<th>UnitPrice</th>
+                                        <th>Quantity</th>
+                                        <th>Discount</th>*@
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var order in Model.ToList())
+                                    {
+                                        <tr>
+                                            <td>@order.Id</td>
+                                            <td>@order.CustomerId</td>
+                                            @*<td>@order.EmployeeId</td>*@
+                                            <td>@order.OrderDate</td>
+                                            @*<td>@order.RequiredDate</td>*@
+                                            @*<td>@order.ShippedDate</td>*@
+                                            @*<td>@order.ShipVia</td>*@
+                                            @*<td>@order.Freight</td>*@
+                                            <td>@order.ShipName</td>
+                                            @*<td>@order.ShipAddress.Street</td>*@
+                                            @*<td>@order.ShipAddress.City</td>*@
+                                            @*<td>@order.ShipAddress.Region</td>*@
+                                            @*<td>@order.ShipAddress.PostalCode</td>*@
+                                            <td>@order.ShipAddress.Country</td>
+                                            <td>@order.Details?.Count()</td>
+                                            <td><a href="/order/update/@order.Id" class="btn btn-info btn-xs"><i class="fas fa-edit"></i></a></td>
+                                            <td> <a href="/order/delete/@order.Id" class="btn btn-danger btn-xs"><i class="fas fa-trash"></i></a></td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div><!-- /.container-fluid -->
+        </div>
+    </section>
+}
+
+

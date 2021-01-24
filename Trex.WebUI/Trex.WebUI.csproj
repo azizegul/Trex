@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Trex.Data\Trex.Data.csproj" />
+    <ProjectReference Include="..\Trex.Entity\Trex.Entity.csproj" />
+    <ProjectReference Include="..\Trex.Service\Trex.Service.csproj" />
+    <ProjectReference Include="..\Trex.ViewModel\Trex.ViewModel.csproj" />
+  </ItemGroup>
+
+</Project>

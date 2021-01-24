@@ -1,0 +1,40 @@
+﻿@model Trex.Entity.Models.Shipper
+@{
+    ViewData["Title"] = "Update";
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-6">
+                <!-- general form elements -->
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Shipper Update</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form method="post">
+                        <div class="card-body">
+                            <input asp-for="Id" type="hidden" />
+                            <div class="form-group">
+                                <label>Company Name</label>
+                                <input asp-for="CompanyName" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input asp-for="Phone" class="form-control" />
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-info">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
